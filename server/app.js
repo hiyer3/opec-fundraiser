@@ -18,19 +18,27 @@ const serviceAccountAuth = new JWT({
 
 // Add headers before the routes are defined
 app.use(function (req, res, next) {
-
   // Website you wish to allow to connect
-  res.setHeader('Access-Control-Allow-Origin', 'https://663b67aa98d28041313843d3--cute-klepon-83d77a.netlify.app/');
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://663b67aa98d28041313843d3--cute-klepon-83d77a.netlify.app/"
+  );
 
   // Request methods you wish to allow
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+  );
 
   // Request headers you wish to allow
-  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "X-Requested-With,content-type"
+  );
 
   // Set to true if you need the website to include cookies in the requests sent
   // to the API (e.g. in case you use sessions)
-  res.setHeader('Access-Control-Allow-Credentials', true);
+  res.setHeader("Access-Control-Allow-Credentials", true);
 
   // Pass to next layer of middleware
   next();
@@ -45,6 +53,8 @@ app.get("/fetchData", async function (req, res) {
     "1JqgaUiFTSRuDrRiqA9LL_xynEfwaFSxtlrs0zYwgHWE",
     serviceAccountAuth
   );
+
+  console.log(doc);
 
   await doc.loadInfo(); // loads document properties and worksheets
 
