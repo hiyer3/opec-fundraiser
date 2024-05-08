@@ -21,7 +21,7 @@ app.use(function (req, res, next) {
   // Website you wish to allow to connect
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "http://craftdigitallab.com/"
+    "http://craftdigitallab.com/fundraiser/"
   );
 
   // Request methods you wish to allow
