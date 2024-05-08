@@ -54,8 +54,6 @@ app.get("/fetchData", async function (req, res) {
     serviceAccountAuth
   );
 
-  console.log(doc);
-
   await doc.loadInfo(); // loads document properties and worksheets
 
   const sheet = doc.sheetsByIndex[0]; // or use `doc.sheetsById[id]` or `doc.sheetsByTitle[title]`
