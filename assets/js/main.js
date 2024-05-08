@@ -221,7 +221,7 @@ function getStateAbbr(state) {
 }
 $(function () {
   var updateChart = function updateChart() {
-    $.getJSON("https://opac17-6be3ebc1c395.herokuapp.com//fetchData", function (rawData) {
+    $.getJSON("https://opac17-6be3ebc1c395.herokuapp.com/fetchData", function (rawData) {
       var data = rawData;
       var dataRows = [];
       var i = 4;
