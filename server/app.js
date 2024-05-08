@@ -1,7 +1,6 @@
 import express from "express";
 import { GoogleSpreadsheet } from "google-spreadsheet";
 import { JWT } from "google-auth-library";
-import serverless from "serverless-http";
 
 import dotenv from "dotenv";
 
@@ -60,4 +59,4 @@ app.get("/fetchData", async function (req, res) {
   return 0;
 });
 
-export const handler = serverless(api);
+app.listen(3000);
