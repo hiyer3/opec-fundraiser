@@ -59,4 +59,4 @@ app.get("/fetchData", async function (req, res) {
   return 0;
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 5000);
