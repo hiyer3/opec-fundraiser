@@ -16,6 +16,9 @@ const serviceAccountAuth = new JWT({
   scopes: ["https://www.googleapis.com/auth/spreadsheets"],
 });
 
+console.log(process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL);
+console.log(process.env.GOOGLE_PRIVATE_KEY);
+
 // Add headers before the routes are defined
 app.use(function (req, res, next) {
   // Website you wish to allow to connect
